@@ -1,0 +1,11 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react",
+    "noImplicitAny": true,
+    "target": "es5",
+    "sourceMap": true,
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true
+  }
+}
