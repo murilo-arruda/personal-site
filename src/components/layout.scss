@@ -622,14 +622,9 @@ pre tt:after {
 }
 
 /* Start here */
-
-.main {
-  display: flex;
-  height: 100vh;
-}
-
 @import '../utils/variables';
+
 body {
   color: #f0f0f0;
-  background-color: $main-neon;
+  background-color: #000080;
 }

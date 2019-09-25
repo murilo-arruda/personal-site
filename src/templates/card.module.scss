@@ -1,0 +1,38 @@
+@import '../utils/variables';
+.cardList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.button-stack {
+  text-align: center;
+  .card-button:last-child {
+    margin-right: 0;
+  }
+}
+.card {
+  width: 300px;
+  background-color: $main-neon;
+  border: 3px solid$pink-red-neon;
+  padding-bottom: 5px;
+}
+.cardImg {
+  margin-bottom: 0;
+}
+.card-title {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+.card-info {
+  margin-bottom: 0.3em;
+}
+.card-button {
+  background-color: $dark-blue;
+  color: #f0f0f0;
+  border: 1px solid $pink-neon;
+  margin-right: 30px;
+}

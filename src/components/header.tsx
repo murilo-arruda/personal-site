@@ -20,8 +20,9 @@ import {
 } from './header.module.scss';
 
 interface Props {
-  siteTitle?: string;
-  data: any;
+  siteTitle: string;
+  className: string;
+  // data: { site: { siteMetadata: { title: string } } };
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
@@ -70,7 +71,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
             </Link>
           </li>
           <li>
-            <Link to="/projetos">
+            <Link to="/projects">
               <Box color="#ff2079" size={18} /> Projetos
             </Link>
           </li>
