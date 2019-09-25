@@ -96,7 +96,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
   );
 };
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
 };
 
 export default Header;
