@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import SEO from '../components/seo';
 
 interface nodeType {
   node: {
@@ -31,6 +32,7 @@ const Projects = () => {
   `);
   return (
     <Layout>
+      <SEO title="Projetos" />
       <div>
         <h1>Projects List</h1>
         <ul>
