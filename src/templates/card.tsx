@@ -26,19 +26,19 @@ interface cardProps {
 
 const Card = ({ img, title, description, linkList }: cardProps) => {
   return (
-    <div className={card}>
+    <div className={card} key={title}>
       <img className={cardImg} src={img.src} alt={img.alt} />
       <h2 className={cardTitle}>{title}</h2>
       <p className={cardInfo}>{description}</p>
       <div className={buttonStack}>
         {linkList.map(options => {
           return options.gatsbyLink ? (
-            <Link to={options.destination}>
+            <Link to={options.destination} key={options.text}>
               {' '}
               <button className={cardButton}>{options.text}</button>
             </Link>
           ) : (
-            <a href={options.destination}>
+            <a href={options.destination} key={options.text}>
               <button className={cardButton}>{options.text}</button>
             </a>
           );

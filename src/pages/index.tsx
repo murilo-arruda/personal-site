@@ -3,30 +3,30 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Card from '../templates/card';
 import { container, cardList } from './index.module.scss';
+import cards from '../cardsIndex';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <section className={container}>
-      <div className={cardList}>
-        <Card
-          img={{
-            src: 'https://via.placeholder.com/300x150',
-            alt: 'placeholder',
-          }}
-          title="Placeholder Card"
-          description="descrição do card e outras coisas"
-          linkList={[
-            {
-              gatsbyLink: false,
-              destination: 'https://via.placeholder.com/300x150',
-              text: '300x150',
-            },
-          ]}
-        />
-      </div>
-    </section>
-  </Layout>
-);
-
+const IndexPage = () => {
+  // Add cards to cardIndex.tsx file
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <section className={container}>
+        <div className={cardList}>
+          {cards &&
+            cards.map(card => {
+              return (
+                <Card
+                  key={card.title}
+                  img={card.img}
+                  title={card.title}
+                  description={card.description}
+                  linkList={card.linkList}
+                />
+              );
+            })}
+        </div>
+      </section>
+    </Layout>
+  );
+};
 export default IndexPage;

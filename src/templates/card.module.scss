@@ -1,11 +1,5 @@
 @import '../utils/variables';
-.cardList {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+
 .button-stack {
   text-align: center;
   .card-button:last-child {
@@ -15,8 +9,13 @@
 .card {
   width: 300px;
   background-color: $main-neon;
-  border: 3px solid$pink-red-neon;
+  border: 4px solid $pink-red-neon;
   padding-bottom: 5px;
+  box-shadow: 0 0 8px 2px $pink-red-neon;
+  transition: box-shadow 0.5s;
+  &:hover {
+    box-shadow: 0 0 1px -2px $pink-red-neon;
+  }
 }
 .cardImg {
   margin-bottom: 0;
@@ -29,10 +28,21 @@
 }
 .card-info {
   margin-bottom: 0.3em;
+  font-size: 0.9em;
+  text-align: center;
 }
 .card-button {
   background-color: $dark-blue;
   color: #f0f0f0;
-  border: 1px solid $pink-neon;
+  border: 1px solid $pink-red-neon;
   margin-right: 30px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+    box-shadow: 0 0 5px 1px $pink-red-neon;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
 }
