@@ -17,6 +17,7 @@ import {
   profileCard,
   description,
   socialList,
+  nav,
 } from './header.module.scss';
 
 interface Props {
@@ -52,13 +53,13 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
           <h1>
             <Link to="/">{siteTitle}</Link>
           </h1>
-          <p>Desenvolvedor full-stack</p>
+          <h3>Desenvolvedor full-stack</h3>
           <p className={description}>
             Programador em constante aprendizagem. Aqui vou compartilhar minhas
             experiências e conhecimentos na área.
           </p>
         </div>
-        <ul>
+        <ul className={nav}>
           <li>
             <Link to="/blog">
               {' '}

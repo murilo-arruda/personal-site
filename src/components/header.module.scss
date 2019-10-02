@@ -2,6 +2,7 @@
 
 .container {
   width: 350px;
+  padding: 5px;
   background-color: $dark-blue;
   border-right: 5px solid $pink-red-neon;
   color: #f0f0f0;
@@ -13,6 +14,7 @@
     text-align: center;
   }
   a {
+    color: #f0f0f0;
     text-decoration: none;
   }
   a:visited {
@@ -51,5 +53,43 @@
   }
   a:hover {
     box-shadow: 0 0 15px #bc2a8d;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 5px solid $pink-red-neon;
+    margin: 10px;
+    .profile-card {
+      h1 {
+        margin-bottom: 0.3em;
+      }
+      h3 {
+        font-size: 1em;
+        margin-bottom: 0.9em;
+      }
+      .description {
+        font-size: 0.9em;
+      }
+      .profile-pic {
+        border-radius: 50%;
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    li {
+      margin-right: 10px;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
