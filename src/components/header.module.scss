@@ -56,7 +56,7 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media (min-width: 461px) and (max-width: 1024px) {
   .container {
     width: 100%;
     border-right: 0;
@@ -75,6 +75,7 @@
       }
       .profile-pic {
         border-radius: 50%;
+        max-width: 50px;
       }
     }
   }
@@ -91,5 +92,51 @@
         margin-right: 0;
       }
     }
+  }
+}
+@media (max-width: 460px) {
+  .container {
+    background-color: black;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 5px solid $pink-red-neon;
+    display: flex;
+    flex-direction: column;
+    .profile-card {
+      .profile-pic {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      h1 {
+        font-size: 1.1em;
+        margin-bottom: 0.3em;
+      }
+      h3 {
+        visibility: hidden;
+        display: none;
+      }
+      .description {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    li {
+      margin-right: 10px;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .social-list {
+    visibility: hidden;
+    display: none;
   }
 }
