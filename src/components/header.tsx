@@ -69,16 +69,17 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
         </div>
         <ul className={nav}>
           <li>
+            <Link to="/about">
+              <User color="#ff2079" size={18} /> Sobre Mim
+            </Link>
+          </li>
+          <li>
             <Link to="/blog">
               {' '}
               <BookOpen color="#ff2079" size={18} /> Blog
             </Link>
           </li>
-          <li>
-            <Link to="/about">
-              <User color="#ff2079" size={18} /> Sobre Mim
-            </Link>
-          </li>
+
           <li>
             <Link to="/projects">
               <Box color="#ff2079" size={18} /> Projetos

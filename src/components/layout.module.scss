@@ -4,10 +4,14 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 .footer-fixed {
-  position: fixed;
+  position: relative;
+  align-self: flex-end;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -18,5 +22,13 @@
   .main {
     display: flex;
     flex-direction: column;
+  }
+  .content {
+  }
+}
+
+@media (max-width: 460px) {
+  .main {
+    margin-top: 4.8rem;
   }
 }

@@ -97,11 +97,21 @@
 @media (max-width: 460px) {
   .container {
     background-color: black;
-    width: 100%;
     border-right: 0;
-    border-bottom: 5px solid $pink-red-neon;
-    display: flex;
-    flex-direction: column;
+    border-bottom: 3px solid $pink-red-neon;
+    display: block;
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    text-transform: lowercase;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+
+    div {
+      display: flex;
+      flex-direction: row;
+    }
     .profile-card {
       .profile-pic {
         width: 2.5rem;
@@ -138,5 +148,6 @@
   .social-list {
     visibility: hidden;
     display: none;
+    width: 0;
   }
 }
