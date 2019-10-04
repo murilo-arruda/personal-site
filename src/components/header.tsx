@@ -17,6 +17,7 @@ import {
   profileCard,
   description,
   socialList,
+  nav,
 } from './header.module.scss';
 
 interface Props {
@@ -28,56 +29,60 @@ interface Props {
 const Header: React.FC<Props> = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "profile_beta.png" }) {
+      mobileImage: file(relativePath: { eq: "profile_beta.png" }) {
         childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixels
-          fixed(width: 100, height: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 48, maxHeight: 48, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "profile_beta.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 48, maxHeight: 48, quality: 60) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
+  const sources = [
+    data.mobileImage.childImageSharp.fluid,
+    {
+      ...data.desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
 
   return (
     <header className={container}>
       <div>
         <div className={profileCard}>
-          <Img
-            className={profilePic}
-            alt="foto de perfil"
-            fixed={data.file.childImageSharp.fixed}
-          />
+          <Img className={profilePic} alt="foto de perfil" fluid={sources} />
           <h1>
             <Link to="/">{siteTitle}</Link>
           </h1>
-          <p>Desenvolvedor full-stack</p>
+          <h3>Desenvolvedor full-stack</h3>
           <p className={description}>
             Programador em constante aprendizagem. Aqui vou compartilhar minhas
             experiências e conhecimentos na área.
           </p>
         </div>
-        <ul>
+        <ul className={nav}>
+          <li>
+            <Link to="/about">
+              <User color="#ff2079" size={18} /> Sobre
+            </Link>
+          </li>
           <li>
             <Link to="/blog">
               {' '}
               <BookOpen color="#ff2079" size={18} /> Blog
             </Link>
           </li>
-          <li>
-            <Link to="/about">
-              <User color="#ff2079" size={18} /> Sobre Mim
-            </Link>
-          </li>
+
           <li>
             <Link to="/projects">
-              <Box color="#ff2079" size={18} /> Projetos
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact">
-              <MessageCircle color="#ff2079" size={18} /> Contato
+              <Box color="#ff2079" size={18} /> Projects
             </Link>
           </li>
         </ul>
