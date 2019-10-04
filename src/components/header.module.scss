@@ -103,7 +103,7 @@
     left: 0px;
     position: fixed;
     right: 0px;
-    text-transform: lowercase;
+
     top: 0px;
     width: 100%;
     z-index: 5;
@@ -113,13 +113,17 @@
       flex-direction: row;
     }
     .profile-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .profile-pic {
         width: 2.5rem;
         height: 2.5rem;
       }
       h1 {
-        font-size: 1.1em;
+        font-size: 1em;
         margin-bottom: 0.3em;
+        font-weight: 500;
       }
       h3 {
         visibility: hidden;
@@ -132,14 +136,22 @@
     }
   }
   .nav {
+    padding-left: 15px;
     display: flex;
     flex-direction: row;
-    text-align: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 5px;
+
     li {
       margin-right: 10px;
       margin-bottom: 0;
+      font-weight: 500;
+      text-align: center;
+      svg {
+        visibility: hidden;
+        display: none;
+      }
       &:last-child {
         margin-right: 0;
       }

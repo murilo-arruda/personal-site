@@ -70,7 +70,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
         <ul className={nav}>
           <li>
             <Link to="/about">
-              <User color="#ff2079" size={18} /> Sobre Mim
+              <User color="#ff2079" size={18} /> Sobre
             </Link>
           </li>
           <li>
@@ -82,7 +82,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
 
           <li>
             <Link to="/projects">
-              <Box color="#ff2079" size={18} /> Projetos
+              <Box color="#ff2079" size={18} /> Projects
             </Link>
           </li>
         </ul>
