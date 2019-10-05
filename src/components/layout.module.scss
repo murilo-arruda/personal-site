@@ -1,3 +1,4 @@
+@import '../utils/variables';
 .main {
   display: flex;
   height: 100vh;
@@ -30,5 +31,8 @@
 @media (max-width: 460px) {
   .main {
     margin-top: 4.8rem;
+  }
+  body {
+    background-color: $dark-blue;
   }
 }

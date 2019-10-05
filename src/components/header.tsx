@@ -25,21 +25,23 @@ interface Props {
   className: string;
   // data: { site: { siteMetadata: { title: string } } };
 }
-
+const activeStyles = {
+  color: 'grey',
+};
 const Header: React.FC<Props> = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
       mobileImage: file(relativePath: { eq: "profile_beta.png" }) {
         childImageSharp {
           fluid(maxWidth: 48, maxHeight: 48, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       desktopImage: file(relativePath: { eq: "profile_beta.png" }) {
         childImageSharp {
-          fluid(maxWidth: 48, maxHeight: 48, quality: 60) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 300, maxHeight: 300, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -69,31 +71,43 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
         </div>
         <ul className={nav}>
           <li>
-            <Link to="/about">
+            <Link to="/about" activeStyle={activeStyles}>
               <User color="#ff2079" size={18} /> Sobre
             </Link>
           </li>
           <li>
-            <Link to="/blog">
+            <Link to="/blog" activeStyle={activeStyles}>
               {' '}
               <BookOpen color="#ff2079" size={18} /> Blog
             </Link>
           </li>
 
           <li>
-            <Link to="/projects">
+            <Link to="/projects" activeStyle={activeStyles}>
               <Box color="#ff2079" size={18} /> Projects
             </Link>
           </li>
         </ul>
         <div className={socialList}>
-          <a href="https://www.linkedin.com/in/muriloarruda/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/muriloarruda/"
+            target="_blank"
+            rel="noopener"
+          >
             <Linkedin />
           </a>
-          <a href="https://twitter.com/passocabr" target="_blank">
+          <a
+            href="https://twitter.com/passocabr"
+            target="_blank"
+            rel="noopener"
+          >
             <Twitter />
           </a>
-          <a href="https://github.com/murilo-arruda" target="_blank">
+          <a
+            href="https://github.com/murilo-arruda"
+            target="_blank"
+            rel="noopener"
+          >
             <GitHub />
           </a>
         </div>
