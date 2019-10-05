@@ -8,6 +8,7 @@
 }
 .card {
   width: 300px;
+  margin-bottom: 15px;
   background-color: $main-neon;
   border: 4px solid $pink-red-neon;
   padding-bottom: 5px;
@@ -44,5 +45,11 @@
   }
   &:active {
     transform: translateY(1px);
+  }
+}
+@media (max-width: 460px) {
+  .card {
+    border: 2px solid $pink-red-neon;
+    box-shadow: 0 0 6px 2px $pink-red-neon;
   }
 }
