@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import {
-  Linkedin,
-  Twitter,
-  GitHub,
-  MessageCircle,
-  User,
-  BookOpen,
-  Box,
-} from 'react-feather';
+import { Linkedin, Twitter, GitHub, User, BookOpen, Box } from 'react-feather';
 import Img from 'gatsby-image';
 
 import {
@@ -116,7 +108,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
   );
 };
 Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: 'Murilo Arruda',
 };
 
 export default Header;

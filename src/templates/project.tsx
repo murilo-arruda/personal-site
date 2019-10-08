@@ -36,7 +36,7 @@ const Project = ({ data }: propsData) => {
   const html = data.markdownRemark.html;
   return (
     <Layout>
-      <SEO title={data.markdownRemark.fields.slug} />
+      <SEO title={data.markdownRemark.frontmatter.title} />
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   );
