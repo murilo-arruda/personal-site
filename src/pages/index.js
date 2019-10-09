@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from 'components/Layout';
+import SEO from 'components/seo';
 import Card from '../templates/card';
 import { container, cardList } from './index.module.scss';
 import cards from '../cardsIndex';

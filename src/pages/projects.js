@@ -1,18 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import SEO from '../components/seo';
+import Layout from 'components/Layout';
+import SEO from 'components/seo';
 
-interface nodeType {
-  node: {
-    frontmatter: {
-      title: string;
-    };
-    fields: {
-      slug: string;
-    };
-  };
-}
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -36,7 +26,7 @@ const Projects = () => {
       <div>
         <h1>Projects List</h1>
         <ul>
-          {data.allMarkdownRemark.edges.map(({ node }: nodeType) => {
+          {data.allMarkdownRemark.edges.map(({ node }) => {
             return (
               <Link to={`/projects/${node.fields.slug}`} key={node.fields.slug}>
                 {node.frontmatter.title}

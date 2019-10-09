@@ -9,22 +9,7 @@ import {
   buttonStack,
 } from './card.module.scss';
 
-interface linkOptions {
-  gatsbyLink: boolean;
-  destination: string;
-  text: string;
-}
-interface cardProps {
-  img: {
-    src: string;
-    alt: string;
-  };
-  title: string;
-  description: string;
-  linkList: Array<linkOptions>;
-}
-
-const Card = ({ img, title, description, linkList }: cardProps) => {
+const Card = ({ img, title, description, linkList }) => {
   return (
     <div className={card} key={title}>
       <img className={cardImg} src={img.src} alt={img.alt} />
