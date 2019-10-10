@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from 'components/Layout';
+import SEO from 'components/seo';
 
 export const query = graphql`
   query($slug: String!) {
@@ -18,21 +18,7 @@ export const query = graphql`
   }
 `;
 
-type propsData = {
-  data: {
-    markdownRemark: {
-      html: string;
-      frontmatter: {
-        title: string;
-        date: string;
-      };
-      fields: {
-        slug: string;
-      };
-    };
-  };
-};
-const Project = ({ data }: propsData) => {
+const Project = ({ data }) => {
   const html = data.markdownRemark.html;
   return (
     <Layout>

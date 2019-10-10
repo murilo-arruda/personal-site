@@ -20,9 +20,10 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-typescript`,
-    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-resolve-src',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
