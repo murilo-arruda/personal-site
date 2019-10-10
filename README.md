@@ -4,6 +4,8 @@
 
 This project is powered by Gatsby and all ecosystem around it.
 
+live version: [muriloarruda.tech](https://muriloarruda.tech)
+
 ## Built With
 
 - [Gatsby](https://www.gatsbyjs.org/)
