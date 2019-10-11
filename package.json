@@ -14,7 +14,6 @@
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-sharp": "^2.2.25",
     "gatsby-plugin-styled-components": "^3.1.8",
-    "gatsby-plugin-tslint": "0.0.2",
     "gatsby-remark-images": "^3.1.23",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-remark": "^2.6.24",
@@ -28,17 +27,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
-    "@types/node": "^12.7.5",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-helmet": "^5.0.10",
-    "prettier": "^1.18.2",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.1.0"
-    
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
