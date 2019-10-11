@@ -3,10 +3,6 @@ import media from 'styled-media-query';
 import Img from 'gatsby-image';
 export const Profile = styled.div`
   text-align: center;
-
-  h1 {
-    margin-bottom: 0.2em;
-  }
   a {
     color: #f0f0f0;
     text-decoration: none;
@@ -24,8 +20,8 @@ export const Profile = styled.div`
     align-items: center;
     h1 {
       margin-left: 10px;
-      font-size: 1em;
-      margin-bottom: 0.3em;
+      font-size: 1.2em;
+     
       font-weight: 500;
     }
     h3 {
@@ -47,9 +43,9 @@ export const Profile = styled.div`
 
 export const Description = styled.p`
   font-size: 1em;
+  color: #cdcdcd;
   ${media.lessThan('small')`
-  font-size: 0.8em;
-    visibility: hidden;
+     visibility: hidden;
      display: none;
 `}
   ${media.between('small', 'large')`

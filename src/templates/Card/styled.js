@@ -9,7 +9,7 @@ export const ButtonStack = styled.div`
 export const StyledCard = styled.div`
   width: 300px;
   margin-bottom: 15px;
-  background-color: ${V.Color.mainNeon};
+  background-color: #040505;
   border: 4px solid ${V.Color.pinkRedNeon};
   padding-bottom: 5px;
   box-shadow: 0 0 8px 2px ${V.Color.pinkRedNeon};
@@ -36,16 +36,18 @@ export const Title = styled.h1`
 
 export const Info = styled.p`
   margin-bottom: 0.3em;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: center;
 `;
 
 export const Button = styled.button`
-  background-color: ${V.Color.darkBlue};
+  background-color: #880044;
+  font-size: 1.2em;
   color: #f0f0f0;
   border: 1px solid ${V.Color.pinkRedNeon};
   margin-right: 30px;
   outline: none;
+  border-radius: 3px;
   &:hover {
     cursor: pointer;
     background-color: blueviolet;

@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import * as V from './variables';
 
 const GlobalStyles = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
 
 /* Document
    ========================================================================== */
@@ -346,13 +348,14 @@ template {
 /**
  * Add the correct display in IE 10.
  */
-
 [hidden] {
   display: none;
 }
+/** ---------------- END OF RESET ---------------- */
+
 body {
   color: #f0f0f0;
-  background-color: #000080;
+  background-color: ${V.Color.smokeBlack};
 }
 
 `;
