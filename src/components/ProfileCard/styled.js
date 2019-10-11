@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import * as V from 'styles/variables';
+
 import Img from 'gatsby-image';
 export const Profile = styled.div`
   text-align: center;
@@ -55,6 +57,7 @@ export const Description = styled.p`
 
 export const Pic = styled(Img)`
   border-radius: 50%;
+
   margin: 0 auto;
   ${media.lessThan('small')`
     width: 2.5rem;
