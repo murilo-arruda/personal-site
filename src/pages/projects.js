@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
+import Card from 'templates/Card';
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -28,9 +29,21 @@ const Projects = () => {
         <ul>
           {data.allMarkdownRemark.edges.map(({ node }) => {
             return (
-              <Link to={`/projects/${node.fields.slug}`} key={node.fields.slug}>
-                {node.frontmatter.title}
-              </Link>
+              <Card
+                img={{
+                  src: 'https://via.placeholder.com/300x150',
+                  alt: node.frontmatter.title,
+                }}
+                title={node.frontmatter.title}
+                description={node.frontmatter.title}
+                linkList={[
+                  {
+                    gatsbyLink: true,
+                    destination: `/projects/${node.fields.slug}`,
+                    text: node.fields.slug,
+                  },
+                ]}
+              />
             );
           })}
         </ul>

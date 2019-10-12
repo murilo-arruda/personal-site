@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import * as V from 'styles/variables';
 
 import Img from 'gatsby-image';
 export const Profile = styled.div`
@@ -67,6 +66,3 @@ export const Pic = styled(Img)`
   max-width: 150px;
   `}
 `;
-/* 
-
-*/
