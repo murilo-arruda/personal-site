@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import Card from 'templates/Card';
+import Card from 'components/Card';
 import cards from '../cardsIndex';
 import styled from 'styled-components';
 

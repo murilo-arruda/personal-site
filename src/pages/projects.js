@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import Card from 'templates/Card';
+import Card from 'components/Card';
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
