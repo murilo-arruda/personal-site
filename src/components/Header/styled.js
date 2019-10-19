@@ -9,7 +9,7 @@ export const Container = styled.header.attrs({ role: 'header' })`
   border-right: 5px solid ${V.Color.pinkRedNeon};
   color: #f0f0f0;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1em;
 
   ${media.between('small', 'large')`
     width: 100%;
@@ -33,5 +33,8 @@ export const Container = styled.header.attrs({ role: 'header' })`
       flex-direction: row;
       justify-content: center;
     }
+  `}
+  ${media.lessThan('334px')`
+    font-size: 0.9em;
   `}
 `;
