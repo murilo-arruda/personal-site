@@ -3,7 +3,8 @@ import media from 'styled-media-query';
 import * as V from 'styles/variables';
 export const Social = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+
   a:visited {
     color: ${V.Color.pinkRedNeon};
   }

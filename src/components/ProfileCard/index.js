@@ -8,7 +8,7 @@ const ProfileCard = ({ avatarSources, siteTitle }) => (
     <h1>
       <Link to="/">{siteTitle}</Link>
     </h1>
-    <h3>Desenvolvedor full-stack</h3>
+    <h4>Desenvolvedor full-stack</h4>
     <S.Description>
       Programador em constante aprendizagem. Aqui vou compartilhar minhas
       experiências e conhecimentos na área.

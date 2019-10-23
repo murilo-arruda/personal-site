@@ -17,7 +17,7 @@ export const Navbar = styled.ul`
   a:hover {
     color: #999898;
   }
-
+  margin: auto;
   ${media.between('small', 'large')`
     display: flex;
     flex-direction: row;
@@ -38,11 +38,10 @@ export const Navbar = styled.ul`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0;
+
     li {
-      margin-right: 10px;   
-      font-weight: 500;
-  
+      margin-right: 10px;
+      margin-bottom: 0;  
       svg {
         visibility: hidden;
         display: none;

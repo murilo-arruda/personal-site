@@ -15,17 +15,18 @@ export const Profile = styled.div`
     color: #999898;
   }
 
+  h4 {
+    margin-top: 0;
+  }
   ${media.lessThan('small')`
     display: flex;
     justify-content: center;
     align-items: center;
     h1 {
       margin-left: 10px;
-      font-size: 1.2em;
-     
-      font-weight: 500;
+     font-size: 1em;
     }
-    h3 {
+    h4 {
       visibility: hidden;
       display: none;
     }
@@ -35,7 +36,7 @@ export const Profile = styled.div`
     h1 {
       margin-bottom: 0.3em;
     }
-    h3 {
+    h4 {
       font-size: 1em;
       margin-bottom: 0.9em;
     }

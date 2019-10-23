@@ -3,6 +3,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import Card from 'components/Card';
+import styled from 'styled-components';
+
+const CardList = styled.div`
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`;
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -25,8 +34,7 @@ const Projects = () => {
     <Layout>
       <SEO title="Projetos" />
       <div>
-        <h1>Projects List</h1>
-        <ul>
+        <CardList>
           {data.allMarkdownRemark.edges.map(({ node }) => {
             return (
               <Card
@@ -46,7 +54,7 @@ const Projects = () => {
               />
             );
           })}
-        </ul>
+        </CardList>
       </div>
     </Layout>
   );
