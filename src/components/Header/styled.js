@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import * as V from 'styles/variables';
 
-export const Container = styled.header.attrs({ role: 'header' })`
+export const Container = styled.header`
   width: 350px;
   padding: 5px;
   background-color: black;
