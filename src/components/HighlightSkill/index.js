@@ -9,11 +9,17 @@ const Line = styled.strong`
 const HighlightSkill = ({ children }) => {
   const skillsContext = useContext(SkillsContext);
   const handleOnMouseEnter = () => {
-    console.log(children);
     skillsContext.highlight(children);
   };
+  const handleOnMouseOut = () => {
+    skillsContext.removeHL();
+  };
 
-  return <Line onMouseEnter={handleOnMouseEnter}>{children}</Line>;
+  return (
+    <Line onMouseEnter={handleOnMouseEnter} onMouseOut={handleOnMouseOut}>
+      {children}
+    </Line>
+  );
 };
 
 export default HighlightSkill;

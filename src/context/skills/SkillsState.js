@@ -13,11 +13,16 @@ const SkillsState = props => {
     });
   };
 
+  const removeHL = () => {
+    dispatch({ type: 'remove' });
+  };
+
   return (
     <SkillsContext.Provider
       value={{
         skills: state,
         highlight,
+        removeHL,
       }}
     >
       {props.children}
