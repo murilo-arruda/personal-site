@@ -3,13 +3,13 @@ import skillsReducer from './skillsReducer';
 import SkillsContext from './skillsContext';
 
 const SkillsState = props => {
-  const initialState = null;
+  const initialState = [];
   const [state, dispatch] = useReducer(skillsReducer, initialState);
 
   const highlight = skill => {
     dispatch({
       type: 'add',
-      payload: skill,
+      payload: skill.toUpperCase(),
     });
   };
 

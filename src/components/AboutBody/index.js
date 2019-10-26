@@ -3,28 +3,28 @@ import * as S from './styled';
 import { default as HS } from 'components/HighlightSkill';
 
 const AboutBody = () => {
-  const handleOnHover = e => {
-    console.log(e);
-  };
   return (
     <S.About>
       <h1>Sobre Mim</h1>
       <p>
         Olá, meu nome é Murilo tenho 25 anos e sou progamador{' '}
-        <HS>Full Stack</HS>. atualmente focado em desenvolvimento Web. Estou
-        prestes a me Formar na FAETERJ - Petrópolis em{' '}
-        <HS>Tecnologia da Informação e Comunicação </HS> e dedico grande parte
-        do meu tempo estudando e aprendendo novas tecnologias.
+        <HS skillName="FULLSTACK">Full Stack</HS>. atualmente focado em
+        desenvolvimento Web. Estou prestes a me Formar na FAETERJ - Petrópolis
+        em <HS skillName="TI">Tecnologia da Informação e Comunicação </HS> e
+        dedico grande parte do meu tempo estudando e aprendendo novas
+        tecnologias.
       </p>
       <p>
         Na Web tenho um bom dominio em <HS>Javascript</HS> e venho utilizando{' '}
         <HS>React</HS> como minha escolha de blibioteca na criação de sites
         dinâmicos e modernos. Também tenho conhecimento em: <HS>Node</HS>,{' '}
         <HS>express</HS>, <HS>Redux</HS>, <HS>Vue</HS>, <HS>Gatsby</HS>,{' '}
-        <HS>SASS</HS>, <HS>AWS</HS>, <HS>Netlify</HS>, <HS>Digital Ocean</HS>,{' '}
-        <HS>Git</HS>, <HS>Photoshop</HS>, <HS> Ilustrator</HS>,
-        <HS> Adobe XD</HS> e várias outras tecnologias relacionadas ao
-        <HS> desenvolvimento WEB</HS>.
+        <HS>SASS</HS>, <HS>AWS</HS>, <HS>Netlify</HS>,{' '}
+        <HS skillName="DIGITALOCEAN">Digital Ocean</HS>, <HS>Git</HS>,{' '}
+        <HS>Photoshop</HS>, <HS> Ilustrator</HS>,
+        <HS skillName="ADOBEXD"> Adobe XD</HS> e várias outras tecnologias
+        relacionadas ao
+        <HS skillName="WEBDEV"> desenvolvimento WEB</HS>.
       </p>
       <p>
         <HS>Python</HS> é outra linguagem que tenho um grande carinho e que
@@ -35,8 +35,9 @@ const AboutBody = () => {
       </p>
       <p>
         Sempre estou aumentando minha caixa de ferramenta: <HS>Docker</HS>,{' '}
-        <HS>serviços web </HS>, <HS>TDD</HS>, <HS>Data Science</HS> são algumas
-        áreas/tecnologias que venho aprimorando meu conhecimento.
+        <HS skillName="WEBSERVICES">serviços web </HS>, <HS>TDD</HS>,{' '}
+        <HS>Data Science</HS> são algumas áreas/tecnologias que venho
+        aprimorando meu conhecimento.
       </p>
 
       <p>
