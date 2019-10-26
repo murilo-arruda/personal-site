@@ -16,8 +16,10 @@ const StackList = () => {
       setSkillActive({ ...skillsTable, [current]: { isActive: false } });
       setCurrent(null);
     } else {
-      setSkillActive({ ...skillsTable, [skills]: { isActive: true } });
-      setCurrent(skills);
+      if (skills !== null) {
+        setSkillActive({ ...skillsTable, [skills]: { isActive: true } });
+        setCurrent(skills);
+      }
     }
   }, [skills]);
   return (
