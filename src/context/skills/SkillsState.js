@@ -3,7 +3,7 @@ import skillsReducer from './skillsReducer';
 import SkillsContext from './skillsContext';
 
 const SkillsState = props => {
-  const initialState = [];
+  const initialState = null;
   const [state, dispatch] = useReducer(skillsReducer, initialState);
 
   const highlight = skill => {

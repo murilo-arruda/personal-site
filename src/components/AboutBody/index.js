@@ -21,7 +21,7 @@ const AboutBody = () => {
         <HS>express</HS>, <HS>Redux</HS>, <HS>Vue</HS>, <HS>Gatsby</HS>,{' '}
         <HS>SASS</HS>, <HS>AWS</HS>, <HS>Netlify</HS>,{' '}
         <HS skillName="DIGITALOCEAN">Digital Ocean</HS>, <HS>Git</HS>,{' '}
-        <HS>Photoshop</HS>, <HS> Ilustrator</HS>,
+        <HS>Photoshop</HS>, <HS>Ilustrator</HS>,
         <HS skillName="ADOBEXD"> Adobe XD</HS> e várias outras tecnologias
         relacionadas ao
         <HS skillName="WEBDEV"> desenvolvimento WEB</HS>.

@@ -10,18 +10,38 @@ const Checker = styled.span`
 const StackList = () => {
   const { skills } = useContext(SkillsContext);
   const [skillsTable, setSkillActive] = useState(skillTable);
-  const [current, setCurrent] = useState(null);
+  const [current, setCurrent] = useState([]);
   useEffect(() => {
     if (current) {
-      setSkillActive({ ...skillsTable, [current]: { isActive: false } });
-      setCurrent(null);
+      if (skillsTable[current].special) {
+        skillTable[current].special.map(skill => toggle(skill));
+      } else {
+        toggle(current);
+      }
     } else {
       if (skills !== null) {
-        setSkillActive({ ...skillsTable, [skills]: { isActive: true } });
-        setCurrent(skills);
+        if (skillsTable[skills].special) {
+          skillTable[skills].special.map(skill => toggle(skill));
+        } else {
+          toggle(skills);
+        }
       }
     }
   }, [skills]);
+
+  const toggle = skill => {
+    let isActive = true;
+    if (current === skill) {
+      setCurrent(null);
+      isActive = false;
+    } else {
+      setCurrent(skill);
+    }
+    setSkillActive({
+      ...skillsTable,
+      [skill]: { ...skillsTable[skill], isActive },
+    });
+  };
   return (
     <div>
       {Object.keys(skillsTable).map(key => {
