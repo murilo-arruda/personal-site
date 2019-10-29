@@ -1,20 +1,20 @@
 import React, { useReducer } from 'react';
 import skillsReducer from './skillsReducer';
 import SkillsContext from './skillsContext';
-
+import skillTable from 'utils/skillTable';
 const SkillsState = props => {
-  const initialState = null;
+  const initialState = { ...skillTable };
   const [state, dispatch] = useReducer(skillsReducer, initialState);
 
   const highlight = skill => {
     dispatch({
-      type: 'add',
+      type: 'active',
       payload: skill.toUpperCase(),
     });
   };
 
-  const removeHL = () => {
-    dispatch({ type: 'remove' });
+  const removeHL = skill => {
+    dispatch({ type: 'deactive', payload: skill.toUpperCase() });
   };
 
   return (

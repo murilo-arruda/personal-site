@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import * as V from 'styles/variables';
 import SkillsContext from 'context/skills/skillsContext';
@@ -8,12 +8,12 @@ const Line = styled.strong`
 `;
 const HighlightSkill = ({ children, skillName }) => {
   const skillsContext = useContext(SkillsContext);
-
+  const skill = skillName ? skillName : children;
   const handleOnMouseEnter = () => {
-    skillsContext.highlight(skillName ? skillName : children);
+    skillsContext.highlight(skill);
   };
   const handleOnMouseOut = () => {
-    skillsContext.removeHL();
+    skillsContext.removeHL(skill);
   };
 
   return (
