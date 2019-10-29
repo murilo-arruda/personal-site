@@ -4,7 +4,7 @@
 
 My personal built with Gatsby.
 
-live version: [muriloarruda.tech](https://muriloarruda.tech)
+live version: [muriloarruda.tech](https://muriloarruda.tech). this is not the final version.
 
 ## Built With
 
