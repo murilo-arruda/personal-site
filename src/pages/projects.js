@@ -21,6 +21,7 @@ const Projects = () => {
           node {
             frontmatter {
               title
+              description
             }
             fields {
               slug
@@ -43,7 +44,7 @@ const Projects = () => {
                   alt: node.frontmatter.title,
                 }}
                 title={node.frontmatter.title}
-                description={node.frontmatter.title}
+                description={node.frontmatter.description}
                 linkList={[
                   {
                     gatsbyLink: true,
