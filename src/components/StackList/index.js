@@ -10,11 +10,13 @@ const StackList = () => {
   useEffect(() => {}, [skills]);
   return (
     <div>
-      {Object.keys(skills).map(key => (
-        <Checker shouldHighlight={skills[key].isActive} key={key}>
-          {key}{' '}
-        </Checker>
-      ))}
+      {Object.keys(skills).map(key =>
+        !skills[key].special ? (
+          <Checker shouldHighlight={skills[key].isActive} key={key}>
+            {key}{' '}
+          </Checker>
+        ) : null
+      )}
     </div>
   );
 };

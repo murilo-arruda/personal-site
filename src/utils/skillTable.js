@@ -1,4 +1,6 @@
+const webServicesSpecial = ['AWS', 'NETLIFY', 'DIGITALOCEAN'];
 const webDevSpecial = [
+  ...webServicesSpecial,
   'REACT',
   'JAVASCRIPT',
   'NODE',
@@ -7,18 +9,16 @@ const webDevSpecial = [
   'VUE',
   'GATSBY',
   'SASS',
-  'AWS',
-  'NETLIFY',
-  'DIGITALOCEAN',
   'GIT',
   'PHOTOSHOP',
   'ILUSTRATOR',
   'ADOBEXD',
 ];
+const fullStackSpecial = [...webDevSpecial, 'PYTHON', 'DOCKER', 'TDD', 'C#'];
 
 const skillTable = {
-  FULLSTACK: { isActive: false, special: null },
-  TI: { isActive: false, special: null },
+  FULLSTACK: { isActive: false, special: [...fullStackSpecial] },
+  TI: { isActive: false, special: [...fullStackSpecial, 'DATA SCIENCE'] },
   REACT: { isActive: false, iconPath: '', special: null },
   JAVASCRIPT: { isActive: false, iconPath: '', special: null },
   NODE: { isActive: false, iconPath: '', special: null },
@@ -38,7 +38,11 @@ const skillTable = {
   PYTHON: { isActive: false, iconPath: '', special: null },
   'C#': { isActive: false, iconPath: '', special: null },
   DOCKER: { isActive: false, iconPath: '', special: null },
-  WEBSERVICES: { isActive: false, iconPath: '', special: null },
+  WEBSERVICES: {
+    isActive: false,
+    iconPath: '',
+    special: [...webServicesSpecial],
+  },
   TDD: { isActive: false, iconPath: '', special: null },
   LINKEDIN: { isActive: false, iconPath: '', special: null },
   TWITTER: { isActive: false, iconPath: '', special: null },
