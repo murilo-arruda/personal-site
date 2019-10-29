@@ -24,9 +24,7 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <S.Content>
           <section>{children}</section>
-          <S.Footer>
-            © {new Date().getFullYear()}, built by: Murilo Arruda using Gatsby
-          </S.Footer>
+          <S.Footer>© {new Date().getFullYear()} - Murilo Arruda</S.Footer>
         </S.Content>
       </S.Main>
     </Fragment>
