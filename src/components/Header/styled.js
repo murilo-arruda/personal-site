@@ -11,13 +11,13 @@ export const Container = styled.header`
   text-align: center;
   font-size: 1em;
 
-  ${media.between('small', 'large')`
+  ${media.between('614px', 'large')`
     width: 100%;
     border-right: 0;
     border-bottom: 5px solid ${V.Color.pinkRedNeon};
     margin: 10px;
   `}
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     border-right: 0;
     border-bottom: 3px solid ${V.Color.pinkRedNeon};
     display: block;

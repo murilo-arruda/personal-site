@@ -11,7 +11,7 @@ export const About = styled.div`
   p {
     font-size: 1.5em;
   }
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
   padding-left: 10px;
   padding-right: 10px;
     p {

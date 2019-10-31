@@ -6,7 +6,7 @@ export const Main = styled.main.attrs({
 })`
   display: flex;
   height: 100vh;
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
   margin-top: 4.8rem;
   `}
   ${media.lessThan('large')`
@@ -28,4 +28,5 @@ export const Footer = styled.footer`
   bottom: 0;
   width: 100%;
   text-align: center;
+  padding-bottom: 10px;
 `;

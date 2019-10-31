@@ -18,7 +18,7 @@ export const Navbar = styled.ul`
     color: #999898;
   }
   margin: auto;
-  ${media.between('small', 'large')`
+  ${media.between('614px', 'large')`
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -33,7 +33,7 @@ export const Navbar = styled.ul`
     }
   `}
 
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     padding-left: 15px;
     display: flex;
     flex-direction: row;

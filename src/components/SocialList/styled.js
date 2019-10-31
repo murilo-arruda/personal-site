@@ -17,7 +17,7 @@ export const Social = styled.div`
     box-shadow: 0 0 15px #bc2a8d;
   }
 
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     visibility: hidden;
     display: none;
     width: 0;

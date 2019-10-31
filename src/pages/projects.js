@@ -4,13 +4,23 @@ import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import Card from 'components/Card';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const CardList = styled.div`
   padding: 0;
-  margin: 0;
-  display: flex;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 30px;
+  ${media.lessThan('large')`
+
   justify-content: space-around;
+  display:flex;
   flex-wrap: wrap;
+  `}
+  ${media.lessThan('1290px')`
+  grid-template-columns: repeat(2, 1fr);
+  `};
 `;
 
 const Projects = () => {
@@ -31,18 +41,21 @@ const Projects = () => {
       }
     }
   `);
+  const projects = data.allMarkdownRemark.edges;
+  console.log(projects.length);
   return (
     <Layout>
       <SEO title="Projetos" />
       <div>
         <CardList>
-          {data.allMarkdownRemark.edges.map(({ node }) => {
+          {projects.map(({ node }) => {
             return (
               <Card
                 img={{
                   src: 'https://via.placeholder.com/300x150',
                   alt: node.frontmatter.title,
                 }}
+                key={node.frontmatter.title}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
                 linkList={[

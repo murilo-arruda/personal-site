@@ -17,7 +17,7 @@ export const StyledCard = styled.div`
   &:hover {
     box-shadow: 0 0 1px -2px ${V.Color.pinkRedNeon};
   }
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     border: 2px solid ${V.Color.pinkRedNeon};
     box-shadow: 0 0 6px 2px ${V.Color.pinkRedNeon};
   `}

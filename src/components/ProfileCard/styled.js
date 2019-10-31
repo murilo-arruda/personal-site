@@ -18,7 +18,7 @@ export const Profile = styled.div`
   h4 {
     margin-top: 0;
   }
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ export const Profile = styled.div`
     }
   `}
 
-  ${media.between('small', 'large')`
+  ${media.between('614px', 'large')`
     h1 {
       margin-bottom: 0.3em;
     }
@@ -46,11 +46,11 @@ export const Profile = styled.div`
 export const Description = styled.p`
   font-size: 1em;
   color: #cdcdcd;
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
      visibility: hidden;
      display: none;
 `}
-  ${media.between('small', 'large')`
+  ${media.between('614px', 'large')`
   font-size: .9em;
 `}
 `;
@@ -59,11 +59,11 @@ export const Pic = styled(Img)`
   border-radius: 50%;
 
   margin: 0 auto;
-  ${media.lessThan('small')`
+  ${media.lessThan('614px')`
     width: 2.5rem;
     height: 2.5rem;
   `}
-  ${media.between('small', 'large')`
+  ${media.between('614px', 'large')`
   max-width: 150px;
   `}
 `;
