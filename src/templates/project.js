@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
+import * as S from './styledProject';
 
 export const query = graphql`
   query($slug: String!) {
@@ -23,7 +24,7 @@ const Project = ({ data }) => {
   return (
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      <S.MarkdownBody dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 };
