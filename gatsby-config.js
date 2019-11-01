@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Murilo Arruda`,
-    description: `My personal website.`,
+    description:
+      'Meu site pessoal onde compartilho meu projetos, conhecimentos e ideais.',
     author: `@passocabr`,
   },
   plugins: [
