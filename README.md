@@ -7,9 +7,9 @@ My personal site built with Gatsby.
 live version: [muriloarruda.tech](https://muriloarruda.tech). 
 
 ### TODO
-- [] icons on about page
-- [] improve responsiviness
-- [] more detailed projects
+- [ ] icons on about page
+- [ ] improve responsiviness
+- [ ] more detailed projects
 
 ## Built With
 
