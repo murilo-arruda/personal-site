@@ -7,7 +7,8 @@ const Blogs = () => {
     <Layout>
       <SEO title="Blog" />
       <div>
-        <h1>Blogs List</h1>
+        <h2>Blogs </h2>
+        <p>Muito em breve escreverei minhas ideias aqui!</p>
       </div>
     </Layout>
   );

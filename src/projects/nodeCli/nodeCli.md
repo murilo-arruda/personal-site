@@ -4,7 +4,7 @@ date: '24/09/2019'
 description: 'Projeto feito na Hacktoberfest 2018.'
 ---
 
-# Cli to-do List
+## Cli to-do List
 
 Projeto open source feito durante a <a target="_blank" rel="noopener noreferrer" href="https://hacktoberfest.digitalocean.com">**Hacktoberfest** </a> de 2018.
 Esse programa de linha de comando foi feito para ajudar novos membros da comunidade a utilizar o Github
