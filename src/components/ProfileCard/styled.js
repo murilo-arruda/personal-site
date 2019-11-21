@@ -57,7 +57,6 @@ export const Description = styled.p`
 
 export const Pic = styled(Img)`
   border-radius: 50%;
-
   margin: 0 auto;
   ${media.lessThan('614px')`
     width: 2.5rem;

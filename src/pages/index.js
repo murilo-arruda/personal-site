@@ -4,6 +4,7 @@ import SEO from 'components/seo';
 import Card from 'components/Card';
 import cards from '../cardsIndex';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const Container = styled.section`
   flex-grow: 100;
@@ -15,6 +16,9 @@ const CardList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  ${media.greaterThan('1171px')`
+  margin-top: 20%;
+  `}
 `;
 
 const IndexPage = () => {

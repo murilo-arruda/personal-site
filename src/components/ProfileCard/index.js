@@ -5,6 +5,7 @@ import * as S from './styled';
 const ProfileCard = ({ avatarSources, siteTitle }) => (
   <S.Profile>
     <S.Pic alt="Murilo Arruda" fluid={avatarSources} />
+
     <h1>
       <Link to="/">{siteTitle}</Link>
     </h1>

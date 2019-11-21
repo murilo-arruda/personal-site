@@ -21,6 +21,12 @@ const CardList = styled.div`
   ${media.lessThan('1290px')`
   grid-template-columns: repeat(2, 1fr);
   `};
+  ${media.greaterThan('1171px')`
+    margin-top: 5%;
+  `}
+  ${media.greaterThan('1288px')`
+  margin-top: 15%;
+  `}
 `;
 
 const Projects = () => {
