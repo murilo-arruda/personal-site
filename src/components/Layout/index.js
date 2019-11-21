@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
   return (
     <Fragment>
       <GlobalStyles />
-
       <S.Main>
         <Header siteTitle={data.site.siteMetadata.title} />
         <S.Content>

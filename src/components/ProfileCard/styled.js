@@ -56,6 +56,7 @@ export const Description = styled.p`
 `;
 
 export const Pic = styled(Img)`
+  width: 100%;
   border-radius: 50%;
   margin: 0 auto;
   ${media.lessThan('614px')`
@@ -65,4 +66,7 @@ export const Pic = styled(Img)`
   ${media.between('614px', 'large')`
   max-width: 150px;
   `}
+`;
+export const WrapperCrt = styled.div`
+  border-radius: 50%;
 `;

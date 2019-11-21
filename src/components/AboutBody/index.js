@@ -1,7 +1,14 @@
 import React from 'react';
 import * as S from './styled';
+import { Link } from 'gatsby';
 import { default as HS } from 'components/HighlightSkill';
+import styled from 'styled-components';
+import * as V from 'styles/variables';
 
+const Line = styled.strong`
+  text-decoration: underline;
+  text-decoration-color: ${V.Color.pinkRedNeon};
+`;
 const AboutBody = () => {
   return (
     <S.About>
@@ -46,6 +53,13 @@ const AboutBody = () => {
         conversar sobre programação ou conhecer um pouco mais sobre mim, você
         pode me encontrar em: <HS>Linkedin</HS>, <HS>Twitter</HS> (Embora
         ultimamente não utilize muito), <HS>Github</HS>.
+      </p>
+
+      <p>
+        Você também pode ver alguns dos meus projetos recentes na{' '}
+        <Line>
+          <Link to="/projects">página de projetos.</Link>
+        </Line>
       </p>
     </S.About>
   );
