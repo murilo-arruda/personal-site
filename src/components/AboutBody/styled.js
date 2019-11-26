@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import * as V from 'styles/variables';
+import { Link } from 'gatsby';
 
 export const About = styled.div`
   padding-left: 10%;
   padding-right: 10%;
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+    text-decoration-color: ${V.Color.pinkRedNeon};
+  }
   h1 {
     text-align: center;
   }
@@ -35,7 +42,9 @@ export const About = styled.div`
     }
     `}
 `;
-export const Line = styled.strong`
+export const Linkto = styled(Link)`
   text-decoration: underline;
+  font-weight: bold;
+  color: white;
   text-decoration-color: ${V.Color.pinkRedNeon};
 `;

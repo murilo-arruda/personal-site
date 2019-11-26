@@ -5,6 +5,9 @@ import SkillsContext from 'context/skills/skillsContext';
 const Line = styled.strong`
   text-decoration: underline;
   text-decoration-color: ${V.Color.pinkRedNeon};
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const HighlightSkill = ({ children, skillName }) => {
   const skillsContext = useContext(SkillsContext);

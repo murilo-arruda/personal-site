@@ -357,7 +357,11 @@ body {
   color: #f0f0f0;
   background-color: ${V.Color.smokeBlack};
 }
-
+html, body
+{
+    height: 100%;
+}
 `;
+
 
 export default GlobalStyles;

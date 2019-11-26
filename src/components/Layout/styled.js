@@ -5,7 +5,8 @@ export const Main = styled.main.attrs({
   role: 'main',
 })`
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  margin-bottom: 0;
   ${media.lessThan('614px')`
   margin-top: 4.8rem;
   `}

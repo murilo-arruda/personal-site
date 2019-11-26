@@ -1,14 +1,8 @@
 import React from 'react';
 import * as S from './styled';
-import { Link } from 'gatsby';
 import { default as HS } from 'components/HighlightSkill';
-import styled from 'styled-components';
-import * as V from 'styles/variables';
+import StackList from 'components/StackList';
 
-const Line = styled.strong`
-  text-decoration: underline;
-  text-decoration-color: ${V.Color.pinkRedNeon};
-`;
 const AboutBody = () => {
   return (
     <S.About>
@@ -51,16 +45,39 @@ const AboutBody = () => {
         Estou sempre buscando melhorar meus conhecimentos e sempre disposto a
         ajudar os outros. Caso você queria entrar em contato comigo para
         conversar sobre programação ou conhecer um pouco mais sobre mim, você
-        pode me encontrar em: <HS>Linkedin</HS>, <HS>Twitter</HS> (Embora
-        ultimamente não utilize muito), <HS>Github</HS>.
+        pode me encontrar em:{' '}
+        <a
+          href="https://www.linkedin.com/in/muriloarruda/"
+          target="_blank"
+          rel="noopener noopener noreferrer"
+        >
+          Linkedin
+        </a>
+        ,{' '}
+        <a
+          href="https://twitter.com/passocabr"
+          target="_blank"
+          rel="noopener noopener noreferrer"
+        >
+          Twitter
+        </a>{' '}
+        (Embora ultimamente não utilize muito),{' '}
+        <a
+          href="https://github.com/murilo-arruda"
+          target="_blank"
+          rel="noopener noopener noreferrer"
+        >
+          Github
+        </a>
+        .
       </p>
 
       <p>
         Você também pode ver alguns dos meus projetos recentes na{' '}
-        <Line>
-          <Link to="/projects">página de projetos.</Link>
-        </Line>
+        <S.Linkto to="/projects">página de projetos.</S.Linkto>
       </p>
+
+      <StackList />
     </S.About>
   );
 };
