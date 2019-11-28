@@ -1,12 +1,16 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SkillsContext from 'context/skills/skillsContext';
 import * as S from './styled';
 
 const StackList = () => {
   const { skills } = useContext(SkillsContext);
-  useEffect(() => {}, [skills]);
+  const [highlight, setHighlight] = useState(false);
+
+  useEffect(() => {
+    setHighlight(Object.keys(skills).some(key => skills[key].isActive));
+  }, [skills]);
   return (
-    <S.Wrapper>
+    <S.Wrapper highlight={highlight}>
       {Object.keys(skills).map(key =>
         !skills[key].special && skills[key].icon ? (
           <S.SvgCustomize shouldHighlight={skills[key].isActive} key={key}>

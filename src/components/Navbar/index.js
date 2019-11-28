@@ -22,7 +22,7 @@ const Navabar = () => (
     </li>
     <li>
       <Link to="/projects" activeStyle={activeStyles}>
-        <Box color="#ff2079" size={18} /> Projects
+        <Box color="#ff2079" size={18} /> Projetos
       </Link>
     </li>
   </S.Navbar>
