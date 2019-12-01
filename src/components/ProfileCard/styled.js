@@ -3,13 +3,14 @@ import media from 'styled-media-query';
 import Img from 'gatsby-image';
 
 export const Profile = styled.div`
+  
   text-align: center;
   a {
     color: #f0f0f0;
     text-decoration: none;
   }
   a:visited {
-    color: #f0f0f0;
+    color: #DB005E;
   }
   a:hover {
     color: #999898;
@@ -66,7 +67,4 @@ export const Pic = styled(Img)`
   ${media.between('614px', 'large')`
   max-width: 150px;
   `}
-`;
-export const WrapperCrt = styled.div`
-  border-radius: 50%;
 `;

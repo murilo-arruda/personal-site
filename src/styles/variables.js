@@ -1,5 +1,6 @@
 export const Color = {
   pinkRedNeon: '#ff2079',
-  smokeBlack: '#0f0f0f',
+  prNeonShade: '#DB005E',
+  smokeBlack: '#0e0e0e',
   pastelGrey: '#CDCDCD',
 };

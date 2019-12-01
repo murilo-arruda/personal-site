@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 import { User, BookOpen, Box } from 'react-feather';
 
 const activeStyles = {
-  color: 'grey',
+  textDecoration: 'underline',
+  textDecorationColor: '#DB005E',
 };
 
 const Navabar = () => (

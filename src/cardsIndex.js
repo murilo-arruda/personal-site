@@ -6,13 +6,7 @@ export default [
     },
     title: 'Sobre mim',
     description: 'Conheça um pouco sobre mim e entre em contato caso queira.',
-    linkList: [
-      {
-        gatsbyLink: true,
-        destination: '/about',
-        text: 'Sobre mim',
-      },
-    ],
+    link:  '/about',
   },
   {
     img: {
@@ -21,13 +15,8 @@ export default [
     },
     title: 'Blog',
     description: 'Minhas descobertas e aprendizados no mundo da programação.',
-    linkList: [
-      {
-        gatsbyLink: true,
-        destination: '/blog',
-        text: 'Blogs',
-      },
-    ],
+    link: '/blog',
+     
   },
 
   {
@@ -37,12 +26,6 @@ export default [
     },
     title: 'Projetos',
     description: 'Projetos recentes que servem de base para meu aprendizado.',
-    linkList: [
-      {
-        gatsbyLink: true,
-        destination: '/projects',
-        text: 'Projetos',
-      },
-    ],
+    link:'/projects',
   },
 ];
