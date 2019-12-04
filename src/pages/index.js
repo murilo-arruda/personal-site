@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import CardIndex from 'components/CardIndex';
+import Card from 'components/Card';
 import cards from '../cardsIndex';
 import styled from 'styled-components';
 import media from 'styled-media-query';
@@ -30,7 +30,7 @@ const IndexPage = () => {
           {cards &&
             cards.map(card => {
               return (
-                <CardIndex
+                <Card
                   key={card.title}
                   img={card.img}
                   title={card.title}

@@ -48,7 +48,6 @@ const Projects = () => {
     }
   `);
   const projects = data.allMarkdownRemark.edges;
-  console.log(projects.length);
   return (
     <Layout>
       <SEO title="Projetos" />
@@ -64,13 +63,7 @@ const Projects = () => {
                 key={node.frontmatter.title}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                linkList={[
-                  {
-                    gatsbyLink: true,
-                    destination: `/projects/${node.fields.slug}`,
-                    text: node.fields.slug,
-                  },
-                ]}
+                link={`/projects/${node.fields.slug}`}
               />
             );
           })}
