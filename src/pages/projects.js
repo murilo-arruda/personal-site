@@ -29,25 +29,9 @@ const CardList = styled.div`
   `}
 `;
 
-const Projects = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              description
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-  const projects = data.allMarkdownRemark.edges;
+const Projects = props => {
+  const projects = props.data.blog.edges;
+
   return (
     <Layout>
       <SEO title="Projetos" />
@@ -56,12 +40,9 @@ const Projects = () => {
           {projects.map(({ node }) => {
             return (
               <Card
-                img={{
-                  src: 'https://via.placeholder.com/300x150',
-                  alt: node.frontmatter.title,
-                }}
+                img={props.data[node.frontmatter.img]}
+                alt={node.frontmatter.title}
                 key={node.frontmatter.title}
-                title={node.frontmatter.title}
                 description={node.frontmatter.description}
                 link={`/projects/${node.fields.slug}`}
               />
@@ -74,3 +55,57 @@ const Projects = () => {
 };
 
 export default Projects;
+
+export const pageQuery = graphql`
+  query {
+    blog: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            description
+            img
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    logger: file(relativePath: { eq: "logger.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    keeper: file(relativePath: { eq: "keeper.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    github: file(relativePath: { eq: "github.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    list: file(relativePath: { eq: "list.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    snake: file(relativePath: { eq: "snake.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

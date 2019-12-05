@@ -5,6 +5,7 @@ import Card from 'components/Card';
 import cards from '../cardsIndex';
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import { graphql } from 'gatsby';
 
 const Container = styled.section`
   flex-grow: 100;
@@ -21,7 +22,7 @@ const CardList = styled.div`
   `}
 `;
 
-const IndexPage = () => {
+const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -29,13 +30,15 @@ const IndexPage = () => {
         <CardList>
           {cards &&
             cards.map(card => {
+              console.log(props.data[card.img.src]);
               return (
                 <Card
                   key={card.title}
-                  img={card.img}
-                  title={card.title}
+                  img={props.data[card.img.src]}
+                  alt={card.img.alt}
                   description={card.description}
                   link={card.link}
+                  gatsbyTemp={true}
                 />
               );
             })}
@@ -45,3 +48,29 @@ const IndexPage = () => {
   );
 };
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    sobre: file(relativePath: { eq: "sobre.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    blog: file(relativePath: { eq: "blog.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    projetos: file(relativePath: { eq: "projetos.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

@@ -28,15 +28,8 @@ export const Thumb = styled.img`
   margin-bottom: 0;
 `;
 
-export const Title = styled.h1`
-  color: #db005e;
-  margin-top: 0;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 0.3em;
-`;
-
 export const Info = styled.p`
+  padding-top: 10px;
   margin-bottom: 0.3em;
   font-size: 1em;
   text-align: center;

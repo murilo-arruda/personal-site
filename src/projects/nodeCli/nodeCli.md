@@ -2,6 +2,7 @@
 title: 'Cli To-Do List'
 date: '24/09/2019'
 description: 'Projeto feito na Hacktoberfest 2018.'
+img: 'list'
 ---
 
 ## Cli to-do List
