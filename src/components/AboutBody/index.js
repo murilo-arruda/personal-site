@@ -4,11 +4,15 @@ import { default as HS } from 'components/HighlightSkill';
 import StackList from 'components/StackList';
 
 const AboutBody = () => {
+  const getAge = () => {
+    const birthday = +new Date('1993-11-11');
+    return ~~((Date.now() - birthday) / 31557600000);
+  };
   return (
     <S.About>
       <h1>Sobre Mim</h1>
       <p>
-        Olá, meu nome é Murilo tenho 25 anos e sou progamador{' '}
+        Olá, meu nome é Murilo tenho {getAge()} anos e sou progamador{' '}
         <HS skillName="FULLSTACK">Full Stack</HS>. atualmente focado em
         desenvolvimento Web. Estou prestes a me Formar na FAETERJ - Petrópolis
         em <HS skillName="TI">Tecnologia da Informação e Comunicação </HS> e
