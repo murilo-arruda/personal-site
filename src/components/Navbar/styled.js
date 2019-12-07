@@ -2,10 +2,16 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Navbar = styled.ul`
-  padding-inline-start: 0;
+  padding-left: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.3em;
   li {
     list-style: none;
-    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
   a {
     color: #f0f0f0;
@@ -17,38 +23,14 @@ export const Navbar = styled.ul`
   a:hover {
     color: #999898;
   }
-  margin: auto;
-  ${media.between('614px', 'large')`
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-   
-    li {
-      margin-right: 10px;
-     
-      &:last-child {
-        margin-right: 0;
-      }
+  ${media.lessThan('medium')`
+  font-size: .9em;
+  svg {
+      visibility: hidden;
+      display: none;
     }
-  `}
-
-  ${media.lessThan('614px')`
-    padding-left: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    li {
-      margin-right: 10px;
-      margin-bottom: 0;  
-      svg {
-        visibility: hidden;
-        display: none;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   `}
 `;

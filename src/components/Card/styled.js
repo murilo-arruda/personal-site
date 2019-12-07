@@ -9,6 +9,10 @@ export const StyledCard = styled.div`
   background-color: #040505;
   border: 3px solid ${V.Color.pinkRedNeon};
   padding-bottom: 5px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
   transition: transform 0.5s ease;
   &:hover {
     transform: scale(1.05);

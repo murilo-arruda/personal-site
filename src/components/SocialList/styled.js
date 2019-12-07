@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 import * as V from 'styles/variables';
 export const Social = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 
   a:visited {

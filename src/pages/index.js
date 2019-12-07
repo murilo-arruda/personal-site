@@ -17,9 +17,6 @@ const CardList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  ${media.greaterThan('1171px')`
-  margin-top: 20%;
-  `}
 `;
 
 const IndexPage = props => {

@@ -8,37 +8,24 @@ import * as S from './styled';
 const Header = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      mobileImage: file(relativePath: { eq: "profile_beta.png" }) {
+      profilePic: file(relativePath: { eq: "profile_beta.png" }) {
         childImageSharp {
-          fluid(maxWidth: 48, maxHeight: 48, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
-      desktopImage: file(relativePath: { eq: "profile_beta.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
-  const sources = [
-    data.mobileImage.childImageSharp.fluid,
-    {
-      ...data.desktopImage.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    },
-  ];
-  // This div is only used on mobile. Need to find a better solution
+  const source = data.profilePic.childImageSharp.fluid;
+
   return (
     <S.Container>
-      <div>
-        <ProfileCard avatarSources={sources} siteTitle={siteTitle} />
+      <S.HeaderItems>
+        <ProfileCard avatarSource={source} siteTitle={siteTitle} />
         <Navbar />
         <SocialList />
-      </div>
+      </S.HeaderItems>
     </S.Container>
   );
 };

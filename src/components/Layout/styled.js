@@ -5,14 +5,13 @@ export const Main = styled.main.attrs({
   role: 'main',
 })`
   display: flex;
+  max-width: 1280px;
   min-height: 100vh;
-  margin-bottom: 0;
-  ${media.lessThan('614px')`
-  margin-top: 4.8rem;
-  `}
+  margin: 0 auto;
   ${media.lessThan('large')`
   flex-direction: column;
   `}
+  margin-top: 50px;
 `;
 
 export const Content = styled.section`
