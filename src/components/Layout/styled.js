@@ -8,10 +8,13 @@ export const Main = styled.main.attrs({
   max-width: 1280px;
   min-height: 100vh;
   margin: 0 auto;
-  ${media.lessThan('large')`
-  flex-direction: column;
+  padding-top: 55px;
+  ${media.greaterThan('medium')`
+  padding-top: 100px;
+  
   `}
-  margin-top: 50px;
+  ${media.greaterThan('large')`
+  `}
 `;
 
 export const Content = styled.section`

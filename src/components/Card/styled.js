@@ -12,7 +12,6 @@ export const StyledCard = styled.div`
   position: relative;
   left: 0px;
   top: 0px;
-  z-index: 999;
   transition: transform 0.5s ease;
   &:hover {
     transform: scale(1.05);
@@ -21,9 +20,15 @@ export const StyledCard = styled.div`
     border: 2px solid ${V.Color.pinkRedNeon};
    
   `}
-  ${media.greaterThan('615px')`
+  ${media.lessThan('1000px')`
+    border: 2px solid ${V.Color.pinkRedNeon};
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.1);
+    }
+  `}
+  ${media.greaterThan('1000px')`
+    &:hover {
+      transform: scale(1.2);
     }
   `}
 `;

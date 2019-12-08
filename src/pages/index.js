@@ -4,12 +4,10 @@ import SEO from 'components/seo';
 import Card from 'components/Card';
 import cards from '../cardsIndex';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 import { graphql } from 'gatsby';
+import media from 'styled-media-query';
 
-const Container = styled.section`
-  flex-grow: 100;
-`;
+const Container = styled.section``;
 
 const CardList = styled.div`
   padding: 0;
@@ -17,6 +15,10 @@ const CardList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  ${media.lessThan('1000px')`
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 const IndexPage = props => {
