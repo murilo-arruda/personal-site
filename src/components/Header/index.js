@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => {
       <S.HeaderItems>
         <ProfileCard avatarSource={source} siteTitle={siteTitle} />
         <Navbar />
-        <SocialList />
+        <SocialList hideInMobile={true} />
       </S.HeaderItems>
     </S.Container>
   );

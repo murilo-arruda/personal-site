@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from 'components/Header';
 import GlobalStyles from 'styles/global';
 import * as S from './styled';
-
+import SocialList from 'components/SocialList';
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -23,7 +23,10 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <S.Content>
           <section>{children}</section>
-          <S.Footer>© {new Date().getFullYear()} - Murilo Arruda</S.Footer>
+          <S.Footer>
+            <p> © {new Date().getFullYear()} - Murilo Arruda </p>
+            <SocialList hideInMobile={false} />
+          </S.Footer>
         </S.Content>
       </S.Main>
     </Fragment>

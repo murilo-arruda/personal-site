@@ -1,7 +1,7 @@
 ---
 title: 'Snake React'
 date: '24/09/2019'
-description: 'Jogo da cobrinha feito em React'
+description: 'Jogo clássico da cobrinha feito em React.'
 img: 'snake'
 ---
 

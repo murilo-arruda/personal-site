@@ -29,7 +29,6 @@ const IndexPage = props => {
         <CardList>
           {cards &&
             cards.map(card => {
-              console.log(props.data[card.img.src]);
               return (
                 <Card
                   key={card.title}

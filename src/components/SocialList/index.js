@@ -1,9 +1,9 @@
 import React from 'react';
 import { Linkedin, Twitter, GitHub } from 'react-feather';
 import * as S from './styled';
-const SocialList = () => {
+const SocialList = props => {
   return (
-    <S.Social>
+    <S.Social hideInMobile={props.hideInMobile}>
       {' '}
       {/*socialList */}
       <a

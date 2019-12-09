@@ -8,19 +8,14 @@ import media from 'styled-media-query';
 
 const CardList = styled.div`
   padding: 0;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 30px;
-  ${media.lessThan('large')`
-
+  margin: 0;
+  display: flex;
   justify-content: space-around;
-  display:flex;
   flex-wrap: wrap;
+  ${media.lessThan('1000px')`
+    flex-direction: column;
+    align-items: center;
   `}
-  ${media.lessThan('1290px')`
-  grid-template-columns: repeat(2, 1fr);
-  `};
 `;
 
 const Projects = props => {

@@ -1,7 +1,7 @@
 ---
 title: 'Cli To-Do List'
 date: '24/09/2019'
-description: 'Projeto feito na Hacktoberfest 2018.'
+description: 'Lista de tarefas direto na linha de comando. Open Source.'
 img: 'list'
 ---
 

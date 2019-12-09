@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import * as V from 'styles/variables';
-
 export const Container = styled.header`
   display: block;
   background-color: black;

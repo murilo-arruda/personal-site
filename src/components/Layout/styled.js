@@ -25,6 +25,9 @@ export const Content = styled.section`
 `;
 
 export const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   align-self: flex-end;
   left: 0;
@@ -32,4 +35,8 @@ export const Footer = styled.footer`
   width: 100%;
   text-align: center;
   padding-bottom: 10px;
+  p {
+    margin: 0;
+    padding-right: 20px;
+  }
 `;
