@@ -11,9 +11,9 @@ export const Social = styled.div`
     color: ${V.Color.pinkRedNeon};
   }
   a {
-    margin-right: 1em;
     color: ${V.Color.pinkRedNeon};
     border-radius: 50%;
+    padding: 12px;
   }
   a:hover {
     box-shadow: 0 0 15px #bc2a8d;

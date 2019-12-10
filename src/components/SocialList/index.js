@@ -7,6 +7,7 @@ const SocialList = props => {
       {' '}
       {/*socialList */}
       <a
+        aria-label="Linkedin profile link"
         href="https://www.linkedin.com/in/muriloarruda/"
         target="_blank"
         rel="noopener noopener noreferrer"
@@ -14,6 +15,7 @@ const SocialList = props => {
         <Linkedin />
       </a>
       <a
+        aria-label="Twitter profile link"
         href="https://twitter.com/passocabr"
         target="_blank"
         rel="noopener noopener noreferrer"
@@ -21,6 +23,7 @@ const SocialList = props => {
         <Twitter />
       </a>
       <a
+        aria-label="Github profile link"
         href="https://github.com/murilo-arruda"
         target="_blank"
         rel="noopener noopener noreferrer"
