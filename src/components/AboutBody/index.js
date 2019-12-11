@@ -20,8 +20,8 @@ const AboutBody = () => {
         tecnologias.
       </p>
       <p>
-        Na Web tenho um bom dominio em <HS>Javascript</HS> e venho utilizando{' '}
-        <HS>React</HS> como minha escolha de blibioteca na criação de sites
+        Na Web tenho um bom domínio em <HS>Javascript</HS> e venho utilizando{' '}
+        <HS>React</HS> como minha escolha de biblioteca na criação de sites
         dinâmicos e modernos. Também tenho conhecimento em: <HS>Node</HS>,{' '}
         <HS>express</HS>, <HS>Redux</HS>, <HS>Vue</HS>, <HS>Gatsby</HS>,{' '}
         <HS>SASS</HS>, <HS>AWS</HS>, <HS>Netlify</HS>,{' '}
@@ -48,8 +48,8 @@ const AboutBody = () => {
       <p>
         Estou sempre buscando melhorar meus conhecimentos e sempre disposto a
         ajudar os outros. Caso você queria entrar em contato comigo para
-        conversar sobre programação ou conhecer um pouco mais sobre mim, você
-        pode me encontrar em:{' '}
+        conversar sobre programação, oportunidades ou conhecer um pouco mais
+        sobre mim, você pode me encontrar em:{' '}
         <a
           href="https://www.linkedin.com/in/muriloarruda/"
           target="_blank"
