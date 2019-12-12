@@ -6,10 +6,6 @@ My personal site built with Gatsby.
 
 live version: [muriloarruda.tech](https://muriloarruda.tech).
 
-### TODO
-
-- [ ] icons on about page
-- [ ] more detailed projects
 
 ## Built With
 
