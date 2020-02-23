@@ -2,9 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/53119390-d56c-4f90-b61f-67cbd8380c78/deploy-status)](https://app.netlify.com/sites/condescending-varahamihira-dba306/deploys)
 
+## OLD VERSION
 My personal site built with Gatsby.
 
-live version: [muriloarruda.tech](https://muriloarruda.tech).
 
 
 ## Built With
